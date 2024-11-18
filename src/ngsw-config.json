@@ -1,0 +1,31 @@
+{
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "resources": {
+        "files": ["/favicon.ico", "/index.html", "/*.css", "/*.js"]
+      }
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "resources": {
+        "files": ["/a ssets/**"]
+      }
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "app_api",
+      "urls": ["https://api.restful-api.dev/objects"],
+      "cacheConfig": {
+        "strategy": "freshness",
+        "timeout": "10s",
+        "maxAge": "1d",
+        "maxStale": "100"
+      }
+    }
+  ]
+}
